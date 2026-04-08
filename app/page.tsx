@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import Gallery from "@/components/Gallery";
 import Specs from "@/components/Specs";
 import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Hero />
       <Features />
+      <Gallery />
       <Specs />
       <LeadForm />
       <Footer />

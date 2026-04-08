@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="bg-gray-900 text-white py-20 px-6">
@@ -27,23 +29,32 @@ export default function Hero() {
               View Specifications
             </a>
           </div>
-        </div>
-        <div className="flex-1 bg-gray-800 rounded-2xl p-8 text-center">
-          <div className="text-6xl mb-4">✂️</div>
-          <div className="text-2xl font-bold text-blue-400">38&quot; × 68&quot;</div>
-          <div className="text-gray-400 mt-1">Working Area</div>
-          <div className="mt-4 text-sm text-gray-500">
-            vs. DTF Station Arc 127: 23.6&quot; × 31.5&quot;
+          <div className="mt-8 grid grid-cols-3 gap-6 text-center">
+            <div>
+              <div className="text-2xl font-bold text-blue-400">38&quot;×68&quot;</div>
+              <div className="text-xs text-gray-400 mt-1">Working Area</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-blue-400">800mm/s</div>
+              <div className="text-xs text-gray-400 mt-1">Cutting Speed</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-blue-400">0.05mm</div>
+              <div className="text-xs text-gray-400 mt-1">Precision</div>
+            </div>
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-4 text-center">
-            <div>
-              <div className="text-xl font-bold text-white">800 mm/s</div>
-              <div className="text-xs text-gray-400">Max Cutting Speed</div>
-            </div>
-            <div>
-              <div className="text-xl font-bold text-white">0.05 mm</div>
-              <div className="text-xs text-gray-400">Precision</div>
-            </div>
+        </div>
+        <div className="flex-1 relative">
+          <Image
+            src="/images/seco-flatbed-dtf-cutter-overview-rear.jpg"
+            alt="SECO Digital Cutting Systems - professional DTF flatbed cutter"
+            width={600}
+            height={420}
+            className="rounded-2xl shadow-2xl w-full"
+            priority
+          />
+          <div className="absolute -bottom-4 -left-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-lg">
+            vs. Arc 127: 2.7× larger cutting area
           </div>
         </div>
       </div>
