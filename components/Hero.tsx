@@ -46,9 +46,7 @@ export default function Hero() {
         </div>
         <div className="flex-1 w-full">
           <HeroSlider />
-          <div className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold text-center">
-            vs. DTF Station Arc 127: 2.7× larger cutting area
-          </div>
+
         </div>
       </div>
     </section>
