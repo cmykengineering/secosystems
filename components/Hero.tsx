@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Hero() {
   return (
@@ -44,18 +44,9 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="flex-1">
-          <div className="relative">
-            <Image
-              src="/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg"
-              alt="SECO Digital Cutting Systems - professional DTF flatbed cutter hero"
-              width={800}
-              height={600}
-              className="rounded-2xl shadow-2xl w-full h-auto"
-              priority
-            />
-          </div>
-          <div className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold text-center">
+        <div className="flex-1 w-full">
+          <HeroSlider />
+          <div className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold text-center">
             vs. DTF Station Arc 127: 2.7× larger cutting area
           </div>
         </div>
