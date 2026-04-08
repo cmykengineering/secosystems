@@ -45,13 +45,13 @@ export default function Gallery() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((img) => (
-            <div key={img.src} className="group relative overflow-hidden rounded-xl bg-gray-100">
+            <div key={img.src} className="group relative overflow-hidden rounded-xl bg-gray-800" style={{ aspectRatio: "4/3" }}>
               <Image
                 src={img.src}
                 alt={img.alt}
-                width={600}
-                height={400}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                 <p className="text-white text-sm font-medium">{img.caption}</p>
