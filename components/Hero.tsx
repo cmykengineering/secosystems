@@ -30,10 +30,10 @@ export default function Hero() {
         </div>
         <div className="flex-1 bg-gray-800 rounded-2xl p-8 text-center">
           <div className="text-6xl mb-4">✂️</div>
-          <div className="text-2xl font-bold text-blue-400">38" × 68"</div>
+          <div className="text-2xl font-bold text-blue-400">38&quot; × 68&quot;</div>
           <div className="text-gray-400 mt-1">Working Area</div>
           <div className="mt-4 text-sm text-gray-500">
-            vs. DTF Station Arc 127: 23.6" × 31.5"
+            vs. DTF Station Arc 127: 23.6&quot; × 31.5&quot;
           </div>
           <div className="mt-6 grid grid-cols-2 gap-4 text-center">
             <div>
