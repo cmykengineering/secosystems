@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SECO Systems — Professional DTF Flatbed Cutters",
     description:
-      "Industrial-grade DTF & UV DTF flatbed cutters for US print shops. 2.7× larger cutting area than DTF Station Arc 127.",
+      "Industrial-grade DTF & UV DTF flatbed cutters for US print shops. Large cutting area, AI contour, vacuum suction. Request a quote today.",
     url: "https://secosystems.com",
     siteName: "SECO Systems",
     images: [
       {
-        url: "/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
-        height: 750,
+        height: 630,
         alt: "SECO Systems DTF Flatbed Cutter",
       },
     ],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SECO Systems — Professional DTF Flatbed Cutters",
     description:
-      "Industrial-grade DTF & UV DTF flatbed cutters for US print shops. 2.7× larger cutting area than DTF Station Arc 127.",
-    images: ["/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg"],
+      "Industrial-grade DTF & UV DTF flatbed cutters for US print shops. Large cutting area, AI contour, vacuum suction.",
+    images: ["/images/og-image.jpg"],
   },
   robots: {
     index: true,
