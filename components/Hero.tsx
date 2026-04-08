@@ -46,8 +46,8 @@ export default function Hero() {
         </div>
         <div className="flex-1 relative">
           <Image
-            src="/images/seco-flatbed-dtf-cutter-overview-rear.jpg"
-            alt="SECO Digital Cutting Systems - professional DTF flatbed cutter"
+            src="/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg"
+            alt="SECO Digital Cutting Systems - professional DTF flatbed cutter hero"
             width={600}
             height={420}
             className="rounded-2xl shadow-2xl w-full"
