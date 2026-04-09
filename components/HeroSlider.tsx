@@ -54,14 +54,19 @@ export default function HeroSlider() {
         >
           {/* Dark background so any white-bg photos look clean */}
           <div className="absolute inset-0 bg-gray-800" />
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain p-4"
-            priority={i === 0}
-          />
+          {/* Padding wrapper — keep padding OFF the fill image to avoid clipping */}
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div className="relative w-full h-full">
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-contain"
+                priority={i === 0}
+              />
+            </div>
+          </div>
         </div>
       ))}
 
