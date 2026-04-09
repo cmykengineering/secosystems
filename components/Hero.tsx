@@ -1,52 +1,52 @@
-import HeroSlider from "@/components/HeroSlider";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-gray-900 text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1">
-          <div className="inline-block bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full mb-4">
-            US-Adapted • Industrial Grade
+    <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg"
+          alt="SECO Precision DTF Flatbed Cutter"
+          fill
+          priority
+          className="object-cover grayscale opacity-80"
+        />
+      </div>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16">
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-semibold text-xs px-4 py-2 uppercase tracking-widest mb-8">
+            Engineering Excellence
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Professional DTF Flatbed Cutters for Serious Print Shops
+          <h1 className="font-headline font-bold text-7xl xl:text-8xl text-on-surface tracking-tighter leading-none mb-6">
+            Precision Cutting.
+            <br />
+            Engineered Value.
           </h1>
-          <p className="text-gray-300 text-lg mb-8">
-            SECO Systems delivers industrial-grade flatbed cutters for DTF & UV DTF post-print finishing —
-            engineered for the US market with full support, English documentation, and US-compatible power.
+          <p className="font-body text-base text-secondary leading-relaxed mb-10 max-w-lg">
+            Industrial-grade DTF flatbed cutting systems engineered for US print
+            shops. Dual tool heads, AI contour extraction, and 38&quot;×68&quot;
+            working area — built to run.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap gap-0">
             <a
               href="#quote"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-center transition"
+              className="bg-primary text-on-primary font-label font-semibold text-sm px-8 py-4 uppercase tracking-widest hover:bg-primary-container transition-colors"
             >
-              Request a Quote
+              Explore Solutions
             </a>
             <a
               href="#specs"
-              className="border border-gray-500 hover:border-white text-white font-semibold px-8 py-4 rounded-lg text-center transition"
+              className="border border-on-surface text-on-surface font-label font-semibold text-sm px-8 py-4 uppercase tracking-widest hover:bg-on-surface hover:text-white transition-colors"
             >
-              View Specifications
+              View Specs
             </a>
           </div>
-          <div className="mt-8 grid grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="text-2xl font-bold text-blue-400">38&quot;×68&quot;</div>
-              <div className="text-xs text-gray-400 mt-1">Working Area</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400">800mm/s</div>
-              <div className="text-xs text-gray-400 mt-1">Cutting Speed</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400">0.05mm</div>
-              <div className="text-xs text-gray-400 mt-1">Precision</div>
-            </div>
-          </div>
-        </div>
-        <div className="flex-1 w-full">
-          <HeroSlider />
-
         </div>
       </div>
     </section>

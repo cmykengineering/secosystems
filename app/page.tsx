@@ -1,15 +1,11 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Gallery from "@/components/Gallery";
-import Specs from "@/components/Specs";
-import LeadForm from "@/components/LeadForm";
+import Pillars from "@/components/Pillars";
+import Engineering from "@/components/Engineering";
+import Series from "@/components/Series";
+import Support from "@/components/Support";
+import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
-
-export const metadata = {
-  title: "SECO Systems — Professional DTF Flatbed Cutters for US Print Shops",
-  description:
-    "Industrial-grade DTF & UV DTF flatbed cutters adapted for the US market. Larger cutting area, precision AI contour, vacuum suction. Request a quote today.",
-};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -27,7 +23,8 @@ const jsonLd = {
     url: "https://cmykengineering.com",
   },
   url: "https://secosystems.com",
-  image: "https://secosystems.com/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg",
+  image:
+    "https://secosystems.com/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg",
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
@@ -46,14 +43,16 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="min-h-screen bg-white">
+      <Navbar />
+      <main>
         <Hero />
-        <Features />
-        <Gallery />
-        <Specs />
-        <LeadForm />
-        <Footer />
+        <Pillars />
+        <Engineering />
+        <Series />
+        <Support />
+        <QuoteForm />
       </main>
+      <Footer />
     </>
   );
 }
