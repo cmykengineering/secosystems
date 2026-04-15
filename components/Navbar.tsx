@@ -6,13 +6,18 @@ export default function Navbar() {
           SECO PRECISION
         </span>
         <div className="hidden md:flex items-center gap-8">
-          {["Systems", "Solutions", "Support", "Parts", "Contact"].map((link) => (
+          {[
+            { label: "Systems", href: "#specs" },
+            { label: "Series", href: "#series" },
+            { label: "Support", href: "#support" },
+            { label: "Contact", href: "#quote" },
+          ].map(({ label, href }) => (
             <a
-              key={link}
-              href="#"
+              key={label}
+              href={href}
               className="font-label text-sm font-medium text-secondary hover:text-primary uppercase tracking-wide transition-colors"
             >
-              {link}
+              {label}
             </a>
           ))}
         </div>

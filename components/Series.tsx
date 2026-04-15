@@ -4,7 +4,7 @@ const series = [
     tagline: "Precision Standard",
     highlight: false,
     features: [
-      "38\" × 68\" cutting area",
+      '38" × 68" cutting area',
       "Single tool head",
       "AI contour extraction",
       "Vacuum suction table",
@@ -16,7 +16,7 @@ const series = [
     tagline: "Performance Leader",
     highlight: true,
     features: [
-      "38\" × 68\" cutting area",
+      '38" × 68" cutting area',
       "Dual tool heads",
       "AI contour extraction",
       "Vacuum suction table",
@@ -41,15 +41,21 @@ const series = [
 
 export default function Series() {
   return (
-    <section className="bg-inverse-surface py-24 px-6">
+    <section id="series" className="bg-inverse-surface py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-14 text-center">
+        <div className="mb-14">
           <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-3">
             Product Line
           </div>
-          <h2 className="font-headline font-bold text-4xl text-white tracking-tight">
-            Choose Your Configuration
-          </h2>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <h2 className="font-headline font-bold text-4xl text-white tracking-tight">
+              Choose Your Configuration
+            </h2>
+            <p className="font-body text-sm text-tertiary-fixed-dim max-w-xs md:text-right">
+              All series ship with full documentation and US-based onboarding.
+              Pricing available on request.
+            </p>
+          </div>
         </div>
         <div className="grid md:grid-cols-3 gap-0">
           {series.map((s, i) => (
@@ -89,10 +95,10 @@ export default function Series() {
                 className={`block text-center font-label font-semibold text-sm px-6 py-3 uppercase tracking-widest transition-colors ${
                   s.highlight
                     ? "bg-primary text-on-primary hover:bg-primary-container"
-                    : "border border-white/30 text-white hover:border-white"
+                    : "border border-white/30 text-white hover:border-white hover:bg-white/5"
                 }`}
               >
-                Configure
+                Get Quote
               </a>
             </div>
           ))}

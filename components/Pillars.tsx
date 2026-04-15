@@ -24,21 +24,18 @@ const pillars = [
 
 export default function Pillars() {
   return (
-    <section className="bg-surface-container-low py-24 px-6">
+    <section className="bg-white py-20 px-6 border-b border-surface-container-high">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-0">
+        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-surface-container-high">
           {pillars.map((p, i) => (
-            <div
-              key={i}
-              className="border border-outline-variant p-10 hover:border-primary transition-colors group cursor-default"
-            >
-              <span className="material-symbols-outlined text-primary text-5xl block mb-6">
+            <div key={i} className="px-0 md:px-12 py-10 md:py-0 first:pl-0 last:pr-0">
+              <span className="material-symbols-outlined text-primary text-4xl block mb-5">
                 {p.icon}
               </span>
-              <div className="font-headline font-bold text-2xl text-on-surface mb-1">
+              <div className="font-headline font-bold text-xl text-on-surface mb-1">
                 {p.title}
               </div>
-              <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-3">
                 {p.subtitle}
               </div>
               <p className="font-body text-sm text-secondary leading-relaxed">

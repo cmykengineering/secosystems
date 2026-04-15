@@ -1,3 +1,17 @@
+const products = [
+  { label: "S-Series", href: "#series" },
+  { label: "Pro-Series", href: "#series" },
+  { label: "Ultra-Series", href: "#series" },
+  { label: "Accessories", href: "#quote" },
+];
+
+const company = [
+  { label: "Systems", href: "#specs" },
+  { label: "Support", href: "#support" },
+  { label: "Parts", href: "#support" },
+  { label: "Contact", href: "#quote" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-inverse-surface py-16 px-6">
@@ -19,13 +33,13 @@ export default function Footer() {
               Products
             </div>
             <ul className="space-y-2">
-              {["S-Series", "Pro-Series", "Ultra-Series", "Accessories"].map((item) => (
-                <li key={item}>
+              {products.map(({ label, href }) => (
+                <li key={label}>
                   <a
-                    href="#"
+                    href={href}
                     className="font-body text-sm text-tertiary-fixed-dim hover:text-white transition-colors"
                   >
-                    {item}
+                    {label}
                   </a>
                 </li>
               ))}
@@ -36,13 +50,13 @@ export default function Footer() {
               Company
             </div>
             <ul className="space-y-2">
-              {["About", "Support", "Parts", "Contact"].map((item) => (
-                <li key={item}>
+              {company.map(({ label, href }) => (
+                <li key={label}>
                   <a
-                    href="#"
+                    href={href}
                     className="font-body text-sm text-tertiary-fixed-dim hover:text-white transition-colors"
                   >
-                    {item}
+                    {label}
                   </a>
                 </li>
               ))}
