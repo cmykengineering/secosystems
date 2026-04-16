@@ -20,30 +20,29 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-[#081018] text-white">
       <div className="absolute inset-0">
         <Image
-          src="/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg"
+          src="/images/seco-hero-hires.png"
           alt="SECO Systems industrial DTF flatbed cutter for US print shops"
           fill
           priority
           className="object-cover object-center"
         />
       </div>
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,18,.92)_0%,rgba(5,11,18,.78)_38%,rgba(5,11,18,.38)_72%,rgba(5,11,18,.2)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(33,150,243,.18),transparent_32%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,18,.94)_0%,rgba(5,11,18,.82)_40%,rgba(5,11,18,.42)_74%,rgba(5,11,18,.18)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(33,150,243,.16),transparent_34%)]" />
 
       <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-center px-6 pb-16 pt-32 md:min-h-[840px]">
-        <div className="grid w-full gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-end">
+        <div className="grid w-full gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end">
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75 backdrop-blur-sm">
               US-adapted industrial cutting systems
             </div>
 
             <h1 className="max-w-2xl font-headline text-5xl font-bold leading-[0.94] tracking-[-0.04em] text-white sm:text-6xl xl:text-7xl">
-              DTF flatbed cutters built for production, not demos.
+              Industrial DTF cutting capacity for shops ready to scale.
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-7 text-white/72 sm:text-lg">
-              SECO Systems delivers industrial-grade flatbed cutters for DTF and UV DTF finishing with
-              dual tool heads, AI contour extraction, vacuum hold-down, and a production-ready conveyor workflow.
+              SECO Systems brings large-format flatbed cutting, dual-head precision, and a production-ready workflow into a cleaner buying decision for US print shops.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -78,12 +77,12 @@ export default function Hero() {
             <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#71bdff]">Why shops choose SECO</div>
             <div className="mt-4 space-y-4">
               {[
-                "Large-format 38\" × 68\" cutting area for production throughput",
-                "Dual-head architecture for precision contour work and repeatability",
-                "US-oriented onboarding, documentation, and support",
+                "A larger-format workflow designed for real production throughput",
+                "Cleaner contour cutting with dual-head precision and optical registration",
+                "A buying experience positioned around clarity, fit, and implementation support",
               ].map((point) => (
                 <div key={point} className="flex gap-3 border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
-                  <span className="mt-0.5 h-2 w-2 rounded-full bg-[#1693ff]" />
+                  <span className="mt-[9px] h-2 w-2 rounded-full bg-[#1693ff]" />
                   <p className="text-sm leading-6 text-white/74">{point}</p>
                 </div>
               ))}
@@ -91,7 +90,7 @@ export default function Hero() {
             <div className="mt-6 rounded-2xl border border-white/8 bg-white/4 p-4">
               <div className="text-[11px] uppercase tracking-[0.18em] text-white/48">Best fit</div>
               <div className="mt-2 text-sm leading-6 text-white/78">
-                Small and mid-size US print shops scaling DTF finishing without stepping into overpriced legacy systems.
+                Small and mid-size US print shops that want to move beyond manual trimming and entry-level cutter limitations.
               </div>
             </div>
           </div>
