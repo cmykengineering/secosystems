@@ -21,78 +21,71 @@ const engineeringImages = [
 
 const items = [
   {
-    num: "01",
-    title: "Servo-Driven Dual Heads",
-    desc: "Independent T1/T2 tool carriages with ±0.1mm repeatability across the full cutting area.",
+    title: "Dual tool architecture",
+    desc: "Independent T1/T2 head movement helps maintain precise contour work while supporting a more production-ready workflow.",
   },
   {
-    num: "02",
-    title: "Industrial Vacuum Hold-Down",
-    desc: "High-capacity vacuum table eliminates material shift on DTF films and thin media.",
+    title: "Vacuum hold-down table",
+    desc: "Stable material positioning reduces drift and supports cleaner finishing on thin media, DTF film, and similar substrates.",
   },
   {
-    num: "03",
-    title: "AI Contour Extraction",
-    desc: "On-board optical registration reads printed marks and auto-generates cut paths — no manual tracing.",
+    title: "AI contour extraction",
+    desc: "Optical registration helps the system detect printed marks and generate cut paths with less manual intervention.",
+  },
+  {
+    title: "Auto-feed workflow",
+    desc: "Integrated conveyor movement is built to keep output moving and reduce time lost between jobs.",
   },
 ];
 
 export default function Engineering() {
   return (
-    <section id="specs" className="bg-surface-container-low py-24 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-        {/* Left */}
-        <div>
-          <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-            System Architecture
+    <section id="specs" className="bg-slate-950 px-6 py-24 text-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,.9fr)] lg:items-start">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#71bdff]">
+              Technical positioning
+            </div>
+            <h2 className="mt-4 max-w-3xl font-headline text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              Industrial capability without unnecessary complexity.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/68">
+              SECO is positioned for shops that need more than an entry-level cutter but want a cleaner buying decision than the usual industrial equipment process.
+            </p>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
+              {items.map((item) => (
+                <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-7">
+                  <h3 className="font-headline text-xl font-semibold tracking-tight text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/68">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#quote"
+                className="inline-flex items-center justify-center rounded-md bg-[#1693ff] px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-[#3aa5ff]"
+              >
+                Request full specs
+              </a>
+              <a
+                href="#support"
+                className="inline-flex items-center justify-center rounded-md border border-white/14 px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/5"
+              >
+                See support model
+              </a>
+            </div>
           </div>
-          <h2 className="font-headline font-bold text-4xl text-on-surface tracking-tight mb-4">
-            Built for Production. No Trade-Offs.
-          </h2>
-          <p className="font-body text-sm text-secondary leading-relaxed mb-12">
-            Every subsystem is selected for durability, precision, and
-            serviceability in a production shop environment.
-          </p>
-          <div className="space-y-8 mb-12">
-            {items.map((item) => (
-              <div key={item.num} className="flex gap-6">
-                <div className="font-headline font-bold text-3xl text-outline-variant flex-shrink-0 w-12">
-                  {item.num}
-                </div>
-                <div>
-                  <div className="font-headline font-semibold text-base text-on-surface mb-1">
-                    {item.title}
-                  </div>
-                  <p className="font-body text-sm text-secondary leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            {engineeringImages.map((img, i) => (
+              <div key={i} className="relative aspect-[0.95/1] overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" />
               </div>
             ))}
           </div>
-          <a
-            href="#quote"
-            className="inline-block bg-primary text-on-primary font-label font-semibold text-sm px-8 py-4 uppercase tracking-widest hover:bg-primary-container transition-colors"
-          >
-            Request Full Spec Sheet
-          </a>
-        </div>
-
-        {/* Right: 2×2 image grid */}
-        <div className="grid grid-cols-2 gap-1">
-          {engineeringImages.map((img, i) => (
-            <div
-              key={i}
-              className="relative aspect-square overflow-hidden group"
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover grayscale group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          ))}
         </div>
       </div>
     </section>

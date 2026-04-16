@@ -1,106 +1,103 @@
 const series = [
   {
     name: "S-Series",
-    tagline: "Precision Standard",
+    tagline: "Core production configuration",
     highlight: false,
     features: [
-      '38" × 68" cutting area',
-      "Single tool head",
-      "AI contour extraction",
-      "Vacuum suction table",
-      "USB & LAN connectivity",
+      '38" × 68" working area',
+      "Precision contour cutting",
+      "Vacuum table",
+      "USB / LAN connectivity",
+      "Designed for growing shops",
     ],
   },
   {
     name: "Pro-Series",
-    tagline: "Performance Leader",
+    tagline: "Best balance of speed and flexibility",
     highlight: true,
     features: [
-      '38" × 68" cutting area',
+      '38" × 68" working area',
       "Dual tool heads",
       "AI contour extraction",
-      "Vacuum suction table",
+      "Vacuum hold-down",
       "Auto-feed conveyor",
-      "Priority support",
+      "Priority onboarding support",
     ],
   },
   {
     name: "Ultra-Series",
-    tagline: "Heavy Production",
+    tagline: "For heavier production environments",
     highlight: false,
     features: [
-      "Custom cutting area",
-      "Dual tool heads",
-      "AI contour extraction",
+      "Expanded production configuration",
+      "Dual-head cutting workflow",
       "Industrial vacuum system",
-      "Full auto-feed conveyor",
-      "Dedicated account rep",
+      "Advanced conveyor handling",
+      "Higher-volume shop fit",
     ],
   },
 ];
 
 export default function Series() {
   return (
-    <section id="series" className="bg-inverse-surface py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-14">
-          <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-            Product Line
-          </div>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="font-headline font-bold text-4xl text-white tracking-tight">
-              Choose Your Configuration
+    <section id="series" className="bg-white px-6 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-3xl">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#1693ff]">
+              Configurations
+            </div>
+            <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+              Choose the system that fits your production stage.
             </h2>
-            <p className="font-body text-sm text-tertiary-fixed-dim max-w-xs md:text-right">
-              All series ship with full documentation and US-based onboarding.
-              Pricing available on request.
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              The lineup is structured to keep the buying decision simple: start with the right throughput and support level, then match the final configuration to your shop.
             </p>
           </div>
+          <a
+            href="#quote"
+            className="inline-flex items-center justify-center rounded-md border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-900 transition hover:border-slate-950 hover:bg-slate-950 hover:text-white"
+          >
+            Compare options
+          </a>
         </div>
-        <div className="grid md:grid-cols-3 gap-0">
-          {series.map((s, i) => (
-            <div
-              key={i}
-              className={`p-10 border transition-colors ${
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {series.map((s) => (
+            <article
+              key={s.name}
+              className={`rounded-3xl border p-8 ${
                 s.highlight
-                  ? "border-primary border-2 bg-white/5"
-                  : "border-white/10"
+                  ? "border-[#1693ff] bg-slate-950 text-white shadow-[0_24px_80px_rgba(2,12,27,.16)]"
+                  : "border-slate-200 bg-slate-50 text-slate-950"
               }`}
             >
               {s.highlight && (
-                <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-                  Most Popular
+                <div className="mb-5 inline-flex rounded-full border border-white/12 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#71bdff]">
+                  Recommended
                 </div>
               )}
-              <div className="font-headline font-bold text-2xl text-white mb-1">
-                {s.name}
-              </div>
-              <div className="font-body text-sm text-tertiary-fixed-dim mb-8">
-                {s.tagline}
-              </div>
-              <ul className="space-y-3 mb-10">
-                {s.features.map((f, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-primary text-base mt-0.5">
-                      check_circle
-                    </span>
-                    <span className="font-body text-sm text-tertiary-fixed-dim">
-                      {f}
-                    </span>
+              <h3 className="font-headline text-3xl font-bold tracking-tight">{s.name}</h3>
+              <p className={`mt-2 text-sm ${s.highlight ? "text-white/68" : "text-slate-600"}`}>{s.tagline}</p>
+              <ul className="mt-8 space-y-4">
+                {s.features.map((f) => (
+                  <li key={f} className="flex gap-3 text-sm leading-6">
+                    <span className={`mt-2 h-1.5 w-1.5 rounded-full ${s.highlight ? "bg-[#71bdff]" : "bg-[#1693ff]"}`} />
+                    <span className={s.highlight ? "text-white/78" : "text-slate-700"}>{f}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="#quote"
-                className={`block text-center font-label font-semibold text-sm px-6 py-3 uppercase tracking-widest transition-colors ${
+                className={`mt-10 inline-flex w-full items-center justify-center rounded-md px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] transition ${
                   s.highlight
-                    ? "bg-primary text-on-primary hover:bg-primary-container"
-                    : "border border-white/30 text-white hover:border-white hover:bg-white/5"
+                    ? "bg-[#1693ff] text-white hover:bg-[#3aa5ff]"
+                    : "border border-slate-300 text-slate-950 hover:border-slate-950 hover:bg-slate-950 hover:text-white"
                 }`}
               >
-                Get Quote
+                Request pricing
               </a>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -1,77 +1,97 @@
 import Image from "next/image";
 
+const highlights = [
+  {
+    value: '38" × 68"',
+    label: "Working area",
+  },
+  {
+    value: "Dual heads",
+    label: "T1 / T2 carriage",
+  },
+  {
+    value: "AI contour",
+    label: "Optical registration",
+  },
+];
+
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
-      {/* Background image */}
+    <section className="relative overflow-hidden bg-[#081018] text-white">
       <div className="absolute inset-0">
         <Image
           src="/images/seco-digital-cutting-systems-dtf-flatbed-cutter-hero.jpg"
-          alt="SECO Precision DTF Flatbed Cutter — industrial cutting system"
+          alt="SECO Systems industrial DTF flatbed cutter for US print shops"
           fill
           priority
-          className="object-cover grayscale"
+          className="object-cover object-center"
         />
       </div>
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,18,.92)_0%,rgba(5,11,18,.78)_38%,rgba(5,11,18,.38)_72%,rgba(5,11,18,.2)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(33,150,243,.18),transparent_32%)]" />
 
-      {/* Dark cinematic overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+      <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-center px-6 pb-16 pt-32 md:min-h-[840px]">
+        <div className="grid w-full gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-end">
+          <div className="max-w-3xl">
+            <div className="mb-6 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75 backdrop-blur-sm">
+              US-adapted industrial cutting systems
+            </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-20 pt-32">
-        <div className="max-w-2xl">
-          <h1 className="font-headline font-bold text-6xl xl:text-7xl text-white tracking-tighter leading-none mb-6">
-            Precision Cutting.
-            <br />
-            Engineered Value.
-          </h1>
-          <p className="font-body text-base text-white/70 leading-relaxed mb-10 max-w-lg">
-            Industrial DTF flatbed cutting systems built for US print shops.
-            Dual tool heads, AI contour extraction, 38&quot;×68&quot; working
-            area.
-          </p>
-          <div className="flex flex-wrap gap-0 mb-16">
-            <a
-              href="#quote"
-              className="bg-primary text-on-primary font-label font-semibold text-sm px-8 py-4 uppercase tracking-widest hover:bg-primary-container transition-colors"
-            >
-              Request a Quote
-            </a>
-            <a
-              href="#specs"
-              className="border border-white/40 text-white font-label font-semibold text-sm px-8 py-4 uppercase tracking-widest hover:border-white hover:bg-white/10 transition-colors"
-            >
-              View Specs
-            </a>
+            <h1 className="max-w-2xl font-headline text-5xl font-bold leading-[0.94] tracking-[-0.04em] text-white sm:text-6xl xl:text-7xl">
+              DTF flatbed cutters built for production, not demos.
+            </h1>
+
+            <p className="mt-6 max-w-xl text-base leading-7 text-white/72 sm:text-lg">
+              SECO Systems delivers industrial-grade flatbed cutters for DTF and UV DTF finishing with
+              dual tool heads, AI contour extraction, vacuum hold-down, and a production-ready conveyor workflow.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#quote"
+                className="inline-flex items-center justify-center rounded-md bg-[#1693ff] px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-[#3aa5ff]"
+              >
+                Request pricing
+              </a>
+              <a
+                href="#series"
+                className="inline-flex items-center justify-center rounded-md border border-white/18 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10"
+              >
+                Explore configurations
+              </a>
+            </div>
+
+            <div className="mt-12 grid gap-4 sm:grid-cols-3">
+              {highlights.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/10 bg-white/6 px-5 py-5 backdrop-blur-sm"
+                >
+                  <div className="font-headline text-2xl font-bold tracking-tight text-white">{item.value}</div>
+                  <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/55">{item.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Stat bar */}
-          <div className="flex items-start gap-8 pt-8 border-t border-white/20">
-            <div>
-              <div className="font-headline font-bold text-2xl text-white tracking-tight">
-                ±0.1mm
-              </div>
-              <div className="font-label text-xs uppercase tracking-widest text-white/50 mt-1">
-                Contour Accuracy
-              </div>
+          <div className="rounded-3xl border border-white/10 bg-[#0b1620]/78 p-6 shadow-2xl backdrop-blur-md">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#71bdff]">Why shops choose SECO</div>
+            <div className="mt-4 space-y-4">
+              {[
+                "Large-format 38\" × 68\" cutting area for production throughput",
+                "Dual-head architecture for precision contour work and repeatability",
+                "US-oriented onboarding, documentation, and support",
+              ].map((point) => (
+                <div key={point} className="flex gap-3 border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
+                  <span className="mt-0.5 h-2 w-2 rounded-full bg-[#1693ff]" />
+                  <p className="text-sm leading-6 text-white/74">{point}</p>
+                </div>
+              ))}
             </div>
-            <div className="w-px self-stretch bg-white/20" />
-            <div>
-              <div className="font-headline font-bold text-2xl text-white tracking-tight">
-                38&quot;×68&quot;
-              </div>
-              <div className="font-label text-xs uppercase tracking-widest text-white/50 mt-1">
-                Working Area
-              </div>
-            </div>
-            <div className="w-px self-stretch bg-white/20" />
-            <div>
-              <div className="font-headline font-bold text-2xl text-white tracking-tight">
-                Dual Heads
-              </div>
-              <div className="font-label text-xs uppercase tracking-widest text-white/50 mt-1">
-                T1 / T2 Carriage
+            <div className="mt-6 rounded-2xl border border-white/8 bg-white/4 p-4">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-white/48">Best fit</div>
+              <div className="mt-2 text-sm leading-6 text-white/78">
+                Small and mid-size US print shops scaling DTF finishing without stepping into overpriced legacy systems.
               </div>
             </div>
           </div>

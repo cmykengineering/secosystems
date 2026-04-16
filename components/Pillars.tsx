@@ -1,47 +1,54 @@
 const pillars = [
   {
-    icon: "precision_manufacturing",
-    title: "Precision",
-    subtitle: "±0.1mm Accuracy",
+    title: "Production throughput",
+    subtitle: "Designed for daily shop output",
     description:
-      "Servo-driven dual tool heads deliver repeatable contour cuts on every job, every time.",
+      "Auto-feed workflow, stable material handling, and a large working area let your team run more jobs without bottlenecks.",
   },
   {
-    icon: "monetization_on",
-    title: "Value",
-    subtitle: "Industrial ROI",
+    title: "Cut accuracy",
+    subtitle: "Cleaner finishing on every run",
     description:
-      "Enterprise-grade components at a price point built for growing US print shops.",
+      "Dual tool heads and AI-assisted contour extraction help reduce manual trimming and improve repeatability across batches.",
   },
   {
-    icon: "factory",
-    title: "Production",
-    subtitle: "High-Volume Ready",
+    title: "Operational confidence",
+    subtitle: "Built for the US market",
     description:
-      "Auto-feed conveyor and vacuum hold-down keep your operation running without interruption.",
+      "English documentation, onboarding support, and service-minded implementation make the system easier to adopt and scale.",
   },
 ];
 
 export default function Pillars() {
   return (
-    <section className="bg-white py-20 px-6 border-b border-surface-container-high">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-surface-container-high">
-          {pillars.map((p, i) => (
-            <div key={i} className="px-0 md:px-12 py-10 md:py-0 first:pl-0 last:pr-0">
-              <span className="material-symbols-outlined text-primary text-4xl block mb-5">
-                {p.icon}
-              </span>
-              <div className="font-headline font-bold text-xl text-on-surface mb-1">
-                {p.title}
+    <section className="bg-white px-6 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 max-w-3xl">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#1693ff]">
+            Why it sells
+          </div>
+          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+            A machine built around throughput, precision, and serviceability.
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+            The value proposition is simple: reduce manual finishing, keep cutting accuracy consistent, and give your shop a system that can actually support production growth.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {pillars.map((pillar) => (
+            <article
+              key={pillar.title}
+              className="rounded-3xl border border-slate-200 bg-slate-50 p-8 transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white"
+            >
+              <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1693ff]">
+                {pillar.subtitle}
               </div>
-              <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-                {p.subtitle}
-              </div>
-              <p className="font-body text-sm text-secondary leading-relaxed">
-                {p.description}
-              </p>
-            </div>
+              <h3 className="mt-4 font-headline text-2xl font-bold tracking-tight text-slate-950">
+                {pillar.title}
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-slate-600">{pillar.description}</p>
+            </article>
           ))}
         </div>
       </div>

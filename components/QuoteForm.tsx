@@ -4,64 +4,57 @@ const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeKWt-ZPy96HN37vjYchxolOyL85iaRKA-geAc2oig-8YEtOA/viewform?embedded=true";
 
 const promises = [
-  "Full technical spec sheet for your configuration",
-  "Pricing and available lead times",
-  "One business day response from our engineering team",
+  "Recommended configuration based on your workflow",
+  "Pricing, lead times, and technical details",
+  "Reply from our team within one business day",
 ];
 
 export default function QuoteForm() {
   return (
-    <section id="quote" className="bg-surface-container-low py-24 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-        {/* Left: context */}
-        <div className="md:sticky md:top-24">
-          <div className="font-label text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-            Get Started
-          </div>
-          <h2 className="font-headline font-bold text-4xl text-on-surface tracking-tight mb-6">
-            Request Technical
-            <br />
-            Specification
-          </h2>
-          <p className="font-body text-sm text-secondary leading-relaxed mb-8">
-            Tell us about your shop and production volume. We&apos;ll match you
-            to the right configuration and send everything you need to make a
-            decision.
-          </p>
-          <ul className="space-y-4 mb-10">
-            {promises.map((pt, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-base mt-0.5 flex-shrink-0">
-                  check_circle
-                </span>
-                <span className="font-body text-sm text-secondary leading-relaxed">
-                  {pt}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <div className="border-t border-surface-container-high pt-8">
-            <div className="font-label text-xs uppercase tracking-widest text-secondary mb-1">
-              Manufacturer
+    <section id="quote" className="bg-slate-950 px-6 py-24 text-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#71bdff]">
+              Request a quote
             </div>
-            <div className="font-headline font-semibold text-sm text-on-surface">
-              CMYK Engineering
-            </div>
-          </div>
-        </div>
+            <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              Get specs, pricing, and the right configuration.
+            </h2>
+            <p className="mt-5 max-w-xl text-base leading-7 text-white/68">
+              Tell us what your shop is running today and where you want capacity to go next. We&apos;ll match you to a configuration that fits the workflow.
+            </p>
 
-        {/* Right: Google Form embed */}
-        <div className="border border-surface-container-high bg-white overflow-hidden">
-          <iframe
-            src={GOOGLE_FORM_URL}
-            width="100%"
-            height="820"
-            frameBorder="0"
-            title="SECO Systems Quote Request"
-            className="block"
-          >
-            Loading form…
-          </iframe>
+            <div className="mt-8 space-y-4">
+              {promises.map((pt) => (
+                <div key={pt} className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-[#71bdff]" />
+                  <p className="text-sm leading-7 text-white/74">{pt}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">Manufacturer</div>
+              <div className="mt-2 font-headline text-lg font-semibold text-white">CMYK Engineering</div>
+              <p className="mt-3 text-sm leading-6 text-white/65">
+                Industrial DTF finishing systems adapted for the US market with a sales process focused on clarity and fit.
+              </p>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-[32px] border border-white/10 bg-white shadow-[0_30px_120px_rgba(0,0,0,.28)]">
+            <iframe
+              src={GOOGLE_FORM_URL}
+              width="100%"
+              height="860"
+              frameBorder="0"
+              title="SECO Systems Quote Request"
+              className="block"
+            >
+              Loading form…
+            </iframe>
+          </div>
         </div>
       </div>
     </section>
